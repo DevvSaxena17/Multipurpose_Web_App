@@ -7,7 +7,7 @@ import urllib.parse
 # Page settings
 st.set_page_config(page_title="🖤 Python Automation App", layout="centered")
 
-# Custom CSS (neon glow + TikTok palette)
+# Custom CSS (Tik Tok Inspired)
 st.markdown(
     """
     <style>
@@ -107,7 +107,7 @@ def social_media_section():
     st.header("🌐 Post on Social Media")
     col1, col2 = st.columns(2)
     post_message = "This is a post done by Multipurpose Web App"
-    share_url = "https://multipurposewebapp.streamlit.app/"  # You can use your app's URL or any relevant URL
+    share_url = "https://multipurposewebapp.streamlit.app/"
 
     # Instagram (no direct post possible)
     with col1:
@@ -183,7 +183,4 @@ with tab4:
 with tab5:
     social_media_section()
 
-# Remove the task history/logs section from the bottom of the app. Do not display logs or info about actions performed.
-# Keep log_action function for possible future use.
-
-st.markdown("🖤 Designed by Dev Saxena")
+st.markdown("🖤 Designed by Devv Saxena")
