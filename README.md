@@ -4,6 +4,7 @@ This is a modern multipurpose web automation app built using Python and Streamli
 It helps automate real-life digital tasks like sending emails, WhatsApp messages, SMS, making phone calls, and opening social media platforms — all from one unified, interactive interface.
 
 🔗 Live App:
+
 👉 Try it here: https://multipurposewebapp.streamlit.app/
 
 🚀 Features:
