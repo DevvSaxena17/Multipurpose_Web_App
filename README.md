@@ -39,7 +39,8 @@ B.Tech CSE | Linux & DevOps Enthusiast
 🔗 LinkedIn: https://linkedin.com/in/devvsaxena
 🌐 Portfolio: https://devvsaxenaportfolio.netlify.app
 
-Screenshots:
+📸 Screenshots:
+
 <img width="1903" height="948" alt="image" src="https://github.com/user-attachments/assets/75a31467-aa6c-41c7-b4ef-3c34cce58929" />
 
 <img width="1385" height="945" alt="image" src="https://github.com/user-attachments/assets/83c8a089-689d-4c21-a1b2-3a98c7db910f" />
