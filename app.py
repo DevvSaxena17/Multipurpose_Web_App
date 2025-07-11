@@ -112,28 +112,28 @@ def social_media_section():
     # Instagram (no direct post possible)
     with col1:
         if st.button("📸 Instagram"):
-            st.markdown("[Open Instagram](https://instagram.com)", unsafe_allow_html=True)
+            st.markdown("<a href='https://instagram.com' target='_blank' style='display:inline-block;padding:10px 20px;background:#74f0ed;color:#111;text-decoration:none;border-radius:24px;font-weight:bold;margin-top:10px;'>Open Instagram</a>", unsafe_allow_html=True)
             log_action("Displayed Instagram link")
 
     # LinkedIn
     with col1:
         if st.button("🗣 LinkedIn"):
             linkedin_share = f"https://www.linkedin.com/sharing/share-offsite/?url={urllib.parse.quote(share_url)}"
-            st.markdown(f"[Share on LinkedIn]({linkedin_share})", unsafe_allow_html=True)
+            st.markdown(f"<a href='{linkedin_share}' target='_blank' style='display:inline-block;padding:10px 20px;background:#74f0ed;color:#111;text-decoration:none;border-radius:24px;font-weight:bold;margin-top:10px;'>Share on LinkedIn</a>", unsafe_allow_html=True)
             log_action("Displayed LinkedIn share link")
 
     # Twitter
     with col2:
         if st.button("🐦 Twitter"):
             twitter_share = f"https://twitter.com/intent/tweet?text={urllib.parse.quote(post_message)}"
-            st.markdown(f"[Tweet]({twitter_share})", unsafe_allow_html=True)
+            st.markdown(f"<a href='{twitter_share}' target='_blank' style='display:inline-block;padding:10px 20px;background:#74f0ed;color:#111;text-decoration:none;border-radius:24px;font-weight:bold;margin-top:10px;'>Tweet</a>", unsafe_allow_html=True)
             log_action("Displayed Twitter share link")
 
     # Facebook
     with col2:
         if st.button("📘 Facebook"):
             facebook_share = f"https://www.facebook.com/sharer/sharer.php?u={urllib.parse.quote(share_url)}"
-            st.markdown(f"[Share on Facebook]({facebook_share})", unsafe_allow_html=True)
+            st.markdown(f"<a href='{facebook_share}' target='_blank' style='display:inline-block;padding:10px 20px;background:#74f0ed;color:#111;text-decoration:none;border-radius:24px;font-weight:bold;margin-top:10px;'>Share on Facebook</a>", unsafe_allow_html=True)
             log_action("Displayed Facebook share link")
 
 # SMS Section
