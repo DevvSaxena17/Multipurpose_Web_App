@@ -84,7 +84,8 @@ def email_section():
             st.error("Recipient email address is required.")
         else:
             mailto_link = f"mailto:{recipient}?subject={urllib.parse.quote(subject)}&body={urllib.parse.quote(message)}"
-            st.markdown(f"[Click here to open your email client]({mailto_link})", unsafe_allow_html=True)
+            js = f"window.open('{mailto_link}');"
+            st.markdown(f"<script>{js}</script>", unsafe_allow_html=True)
             log_action(f"Opened email client for {recipient} with subject '{subject}'")
             st.toast("Opened email client!", icon="✅")
 
@@ -98,7 +99,8 @@ def whatsapp_section():
             st.error("Phone number is required.")
         else:
             url = f"https://wa.me/{phone}?text={urllib.parse.quote(wa_message)}"
-            st.markdown(f"[Click here to open WhatsApp Web with your message]({url})", unsafe_allow_html=True)
+            js = f"window.open('{url}');"
+            st.markdown(f"<script>{js}</script>", unsafe_allow_html=True)
             log_action(f"Opened WhatsApp Web for {phone} with message '{wa_message}'")
             st.toast("Opened WhatsApp Web!", icon="✅")
 
@@ -146,7 +148,8 @@ def sms_section():
             st.error("Phone number is required.")
         else:
             sms_url = f"sms:{sms_phone}?body={urllib.parse.quote(sms_message)}"
-            st.markdown(f"[Click here to open SMS app with your message]({sms_url})", unsafe_allow_html=True)
+            js = f"window.open('{sms_url}');"
+            st.markdown(f"<script>{js}</script>", unsafe_allow_html=True)
             log_action(f"Opened SMS app for {sms_phone} with message '{sms_message}'")
             st.toast("Opened SMS app!", icon="✅")
 
@@ -159,7 +162,8 @@ def phone_call_section():
             st.error("Phone number is required.")
         else:
             call_url = f"tel:{call_phone}"
-            st.markdown(f"[Click here to open dialer]({call_url})", unsafe_allow_html=True)
+            js = f"window.open('{call_url}');"
+            st.markdown(f"<script>{js}</script>", unsafe_allow_html=True)
             log_action(f"Opened dialer for {call_phone}")
             st.toast("Opened dialer!", icon="✅")
 
