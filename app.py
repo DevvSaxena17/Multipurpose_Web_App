@@ -97,24 +97,35 @@ def whatsapp_section():
 def social_media_section():
     st.header("🌐 Post on Social Media")
     col1, col2 = st.columns(2)
+    post_message = "This is a post done by Multipurpose Web App"
+    share_url = "https://multipurposewebapp.streamlit.app/"  # You can use your app's URL or any relevant URL
+
+    # Instagram (no direct post possible)
     with col1:
         if st.button("📸 Instagram"):
-            with st.spinner("Opening Instagram..."):
-                webbrowser.open("https://instagram.com")
-            log_action("Opened Instagram")
+            st.markdown("[Open Instagram](https://instagram.com)", unsafe_allow_html=True)
+            log_action("Displayed Instagram link")
+
+    # LinkedIn
+    with col1:
         if st.button("🗣 LinkedIn"):
-            with st.spinner("Opening LinkedIn..."):
-                webbrowser.open("https://linkedin.com/feed")
-            log_action("Opened LinkedIn")
+            linkedin_share = f"https://www.linkedin.com/sharing/share-offsite/?url={urllib.parse.quote(share_url)}"
+            st.markdown(f"[Share on LinkedIn]({linkedin_share})", unsafe_allow_html=True)
+            log_action("Displayed LinkedIn share link")
+
+    # Twitter
     with col2:
         if st.button("🐦 Twitter"):
-            with st.spinner("Opening Twitter..."):
-                webbrowser.open("https://twitter.com/compose/tweet")
-            log_action("Opened Twitter")
+            twitter_share = f"https://twitter.com/intent/tweet?text={urllib.parse.quote(post_message)}"
+            st.markdown(f"[Tweet]({twitter_share})", unsafe_allow_html=True)
+            log_action("Displayed Twitter share link")
+
+    # Facebook
+    with col2:
         if st.button("📘 Facebook"):
-            with st.spinner("Opening Facebook..."):
-                webbrowser.open("https://facebook.com")
-            log_action("Opened Facebook")
+            facebook_share = f"https://www.facebook.com/sharer/sharer.php?u={urllib.parse.quote(share_url)}"
+            st.markdown(f"[Share on Facebook]({facebook_share})", unsafe_allow_html=True)
+            log_action("Displayed Facebook share link")
 
 # SMS Section
 def sms_section():
