@@ -42,6 +42,19 @@ st.markdown(
             color: white;
             transform: scale(1.05);
         }
+        @media (max-width: 600px) {
+            .main {
+                padding: 10px;
+                border-radius: 10px;
+            }
+            h1 {
+                font-size: 1.5rem;
+            }
+            .stButton>button {
+                padding: 8px 10px;
+                font-size: 1rem;
+            }
+        }
     </style>
 """,
     unsafe_allow_html=True,
@@ -72,8 +85,6 @@ def email_section():
         else:
             mailto_link = f"mailto:{recipient}?subject={urllib.parse.quote(subject)}&body={urllib.parse.quote(message)}"
             st.markdown(f"[Click here to open your email client]({mailto_link})", unsafe_allow_html=True)
-            with st.spinner("Opening email client..."):
-                webbrowser.open(mailto_link)
             log_action(f"Opened email client for {recipient} with subject '{subject}'")
             st.toast("Opened email client!", icon="✅")
 
@@ -88,8 +99,6 @@ def whatsapp_section():
         else:
             url = f"https://wa.me/{phone}?text={urllib.parse.quote(wa_message)}"
             st.markdown(f"[Click here to open WhatsApp Web with your message]({url})", unsafe_allow_html=True)
-            with st.spinner("Opening WhatsApp Web..."):
-                webbrowser.open(url)
             log_action(f"Opened WhatsApp Web for {phone} with message '{wa_message}'")
             st.toast("Opened WhatsApp Web!", icon="✅")
 
@@ -138,8 +147,6 @@ def sms_section():
         else:
             sms_url = f"sms:{sms_phone}?body={urllib.parse.quote(sms_message)}"
             st.markdown(f"[Click here to open SMS app with your message]({sms_url})", unsafe_allow_html=True)
-            with st.spinner("Opening SMS app..."):
-                webbrowser.open(sms_url)
             log_action(f"Opened SMS app for {sms_phone} with message '{sms_message}'")
             st.toast("Opened SMS app!", icon="✅")
 
@@ -153,8 +160,6 @@ def phone_call_section():
         else:
             call_url = f"tel:{call_phone}"
             st.markdown(f"[Click here to open dialer]({call_url})", unsafe_allow_html=True)
-            with st.spinner("Opening dialer..."):
-                webbrowser.open(call_url)
             log_action(f"Opened dialer for {call_phone}")
             st.toast("Opened dialer!", icon="✅")
 
