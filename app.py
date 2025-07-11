@@ -84,8 +84,7 @@ def email_section():
             st.error("Recipient email address is required.")
         else:
             mailto_link = f"mailto:{recipient}?subject={urllib.parse.quote(subject)}&body={urllib.parse.quote(message)}"
-            js = f"window.open('{mailto_link}');"
-            st.markdown(f"<script>{js}</script>", unsafe_allow_html=True)
+            st.markdown(f"<a href='{mailto_link}' target='_blank' style='display:inline-block;padding:10px 20px;background:#74f0ed;color:#111;text-decoration:none;border-radius:24px;font-weight:bold;margin-top:10px;'>Click here to open your email client</a>", unsafe_allow_html=True)
             log_action(f"Opened email client for {recipient} with subject '{subject}'")
             st.toast("Opened email client!", icon="✅")
 
@@ -99,8 +98,7 @@ def whatsapp_section():
             st.error("Phone number is required.")
         else:
             url = f"https://wa.me/{phone}?text={urllib.parse.quote(wa_message)}"
-            js = f"window.open('{url}');"
-            st.markdown(f"<script>{js}</script>", unsafe_allow_html=True)
+            st.markdown(f"<a href='{url}' target='_blank' style='display:inline-block;padding:10px 20px;background:#74f0ed;color:#111;text-decoration:none;border-radius:24px;font-weight:bold;margin-top:10px;'>Click here to open WhatsApp Web with your message</a>", unsafe_allow_html=True)
             log_action(f"Opened WhatsApp Web for {phone} with message '{wa_message}'")
             st.toast("Opened WhatsApp Web!", icon="✅")
 
@@ -148,8 +146,7 @@ def sms_section():
             st.error("Phone number is required.")
         else:
             sms_url = f"sms:{sms_phone}?body={urllib.parse.quote(sms_message)}"
-            js = f"window.open('{sms_url}');"
-            st.markdown(f"<script>{js}</script>", unsafe_allow_html=True)
+            st.markdown(f"<a href='{sms_url}' target='_blank' style='display:inline-block;padding:10px 20px;background:#74f0ed;color:#111;text-decoration:none;border-radius:24px;font-weight:bold;margin-top:10px;'>Click here to open SMS app with your message</a>", unsafe_allow_html=True)
             log_action(f"Opened SMS app for {sms_phone} with message '{sms_message}'")
             st.toast("Opened SMS app!", icon="✅")
 
@@ -162,8 +159,7 @@ def phone_call_section():
             st.error("Phone number is required.")
         else:
             call_url = f"tel:{call_phone}"
-            js = f"window.open('{call_url}');"
-            st.markdown(f"<script>{js}</script>", unsafe_allow_html=True)
+            st.markdown(f"<a href='{call_url}' target='_blank' style='display:inline-block;padding:10px 20px;background:#74f0ed;color:#111;text-decoration:none;border-radius:24px;font-weight:bold;margin-top:10px;'>Click here to open dialer</a>", unsafe_allow_html=True)
             log_action(f"Opened dialer for {call_phone}")
             st.toast("Opened dialer!", icon="✅")
 
