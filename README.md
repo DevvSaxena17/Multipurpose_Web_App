@@ -1,13 +1,19 @@
-"Multipurpose Web App"
+# "Multipurpose Web App"
 
 This is a modern multipurpose web automation app built using Python and Streamlit.
 It helps automate real-life digital tasks like sending emails, WhatsApp messages, SMS, making phone calls, and opening social media platforms — all from one unified, interactive interface.
 
-🔗 Live App:
+<img width="1525" height="1009" alt="image" src="https://github.com/user-attachments/assets/9725814b-121f-4b3c-8732-a5b4bb935da7" />
+
+--- 
+
+## 🔗 Live App:
 
 👉 Try it here: https://multipurposewebapp.streamlit.app/
 
-🚀 Features:
+---
+
+## 🚀 Features:
 
 📧 Send Email 
 
@@ -27,20 +33,26 @@ It helps automate real-life digital tasks like sending emails, WhatsApp messages
 
 🧠 Responsive and clean UI
 
-🛠️ Tech Stack:
+--- 
+
+## 🛠️ Tech Stack:
 
 Frontend: Streamlit + Custom CSS
 
 Backend: Python
 
-👨‍💻 Created By:
+---
+
+### 👨‍💻 Created By:
 
 Dev Saxena
 B.Tech CSE | Linux & DevOps Enthusiast
-🔗 LinkedIn: https://linkedin.com/in/devvsaxena
-🌐 Portfolio: https://devvsaxenaportfolio.netlify.app
+> 🔗 LinkedIn: https://linkedin.com/in/devvsaxena
+> 🌐 Portfolio: https://devvsaxenaportfolio.netlify.app
 
-📸 Screenshots:
+---
+
+### 📸 Screenshots:
 
 <img width="1903" height="948" alt="image" src="https://github.com/user-attachments/assets/75a31467-aa6c-41c7-b4ef-3c34cce58929" />
 
